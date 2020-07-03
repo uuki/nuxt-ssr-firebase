@@ -1,0 +1,16 @@
+{
+  "name": "nuxt-ssr-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Yuichi Aoki <sena.rn68@gmail.com>",
+  "private": true,
+  "scripts": {
+    "build": "cd app && yarn build && cd ../",
+    "copy": "yarn clean && yarn copy:assets && yarn copy:static",
+    "clean": "mkdir -p public && rm -rf public/* || true",
+    "copy:assets": "cp -R functions/nuxt/dist/ public/assets",
+    "copy:static": "cp -R app/static/* public",
+    "serve": "firebase serve --only hosting,functions",
+    "deploy": "yarn build && yarn copy && firebase deploy"
+  }
+}

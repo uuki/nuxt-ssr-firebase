@@ -1,0 +1,102 @@
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+    es6: true
+  },
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 8,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+      modules: true,
+      spread: true
+    }
+  },
+  extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended'
+  ],
+  // required to lint *.vue files
+  plugins: [
+    'vue'
+  ],
+  globals: {
+    _: true,
+    TimelineLite: false,
+    TimelineMax: false,
+    TweenLite: false,
+    TweenMax: false,
+    Back: false,
+    Bounce: false,
+    Circ: false,
+    Cubic: false,
+    Ease: false,
+    EaseLookup: false,
+    Elastic: false,
+    Expo: false,
+    Linear: false,
+    Power0: false,
+    Power1: false,
+    Power2: false,
+    Power3: false,
+    Power4: false,
+    Quad: false,
+    Quart: false,
+    Quint: false,
+    RoughEase: false,
+    Sine: false,
+    SlowMo: false,
+    SteppedEase: false,
+    Strong: false,
+    Draggable: false,
+    SplitText: false,
+    VelocityTracker: false,
+    CSSPlugin: false,
+    ThrowPropsPlugin: false,
+    BezierPlugin: false
+  },
+  // add your custom rules here
+  rules: {
+    'nuxt/no-cjs-in-config': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'comma-dangle': ['error', 'only-multiline'],
+    'no-debugger': 'error',
+    'no-multiple-empty-lines': 'off',
+    'eol-last': 'off',
+    semi: 'off',
+    'no-unused-vars': 'off',
+    'no-useless-return': 'off',
+    'keyword-spacing': 'off',
+    'space-before-function-paren': 'off',
+    'no-trailing-spaces': 'off',
+    'spaced-comment': 'off',
+    'space-in-parens': 'off',
+    indent: 'off',
+    eqeqeq: 'off',
+    'template-curly-spacing': 'off',
+    'padded-blocks': 'off',
+    'object-property-newline': 'off',
+    camelcase: 'off',
+    'space-infix-ops': 'off',
+    'no-irregular-whitespace': 'off',
+    'no-useless-computed-key': 'off',
+    'no-useless-constructor': 'off',
+    'no-extra-bind': 'off',
+    'dot-notation': 'off',
+    'vue/no-unused-vars': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-closing-bracket-newline': 'off',
+    'vue/html-indent': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/require-v-for-key': 'off',
+    'vue/no-v-html': 'off',
+    'vue/no-unused-components': process.env.NODE_ENV === 'production' ? 1 : 0,
+    'vue/attributes-order': 'off',
+    'vue/name-property-casing': 'off'
+  }
+}
